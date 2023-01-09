@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken')
-require('dotenv').config()
 const fsPromises = require('fs').promises
 const path = require('path')
 const filePath = path.join(__dirname, "..", "model", "users.json")

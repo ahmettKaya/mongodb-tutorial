@@ -2,7 +2,6 @@ const fsPromises = require('fs').promises
 const path = require('path')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-require('dotenv').config()
 
 const usersDB = {
     users: require('../model/users.json'),
