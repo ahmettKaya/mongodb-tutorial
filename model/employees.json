@@ -1,1 +1,22 @@
-[{"id":1,"firstname":"Ahmet","lastname":"Kaya"},{"id":2,"firstname":"Şeyma","lastname":"Kaya"},{"id":3,"firstname":"Beyazıt","lastname":"Kaya"},{"id":4,"firstname":"Mihrimah","lastname":"Kaya"}]
+[
+    {
+        "id": 1,
+        "firstname": "Ahmet",
+        "lastname": "Kaya"
+    },
+    {
+        "id": 2,
+        "firstname": "Şeyma",
+        "lastname": "Kaya"
+    },
+    {
+        "id": 3,
+        "firstname": "Beyazıt",
+        "lastname": "Kaya"
+    },
+    {
+        "id": 4,
+        "firstname": "Mihrimah",
+        "lastname": "Kaya"
+    }
+]
