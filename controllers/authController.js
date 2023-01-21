@@ -26,9 +26,8 @@ const handleLogin = async (req, res) => {
             process.env.REFRESH_TOKEN_SECRET,
             {expiresIn: '1d'}
         )
-        const currentUser = {...foundUser, refreshToken}
         await User.updateOne({name: name}, {refreshToken: refreshToken})
-        res.cookie('jwt', refreshToken, {httpOnly: true, sameSite: 'None', secure: true, maxAge: 24*60*60*1000})
+        res.cookie('jwt', refreshToken, {httpOnly: true, sameSite: 'None', /*secure: true,*/ maxAge: 24*60*60*1000})
         res.json({accesToken})
     } else {
         res.sendStatus(401)
