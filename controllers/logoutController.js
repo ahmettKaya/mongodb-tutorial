@@ -12,7 +12,7 @@ const handleLogout = async (req, res) => {
     }
     
     // Delete refreshToken in the user
-    const result =  await User.updateOne({name: foundUser.name}, {refreshToken: ""}, (error, result) => {
+    await User.updateOne({name: foundUser.name}, {refreshToken: ""}, (error, result) => {
         if (error) {
             console.error(error)
         } else {
