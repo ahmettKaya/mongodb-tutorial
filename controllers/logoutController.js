@@ -12,13 +12,8 @@ const handleLogout = async (req, res) => {
     }
     
     // Delete refreshToken in the user
-    await User.updateOne({name: foundUser.name}, {refreshToken: ""}, (error, result) => {
-        if (error) {
-            console.error(error)
-        } else {
-            console.log(result)
-        }
-    }).clone()
+    foundUser.refreshToken = ''
+    await foundUser.save()
     res.clearCookie('jwt', {httpOnly: true, sameSite: 'None'/*, secure: true*/})
     res.sendStatus(204)
 }
